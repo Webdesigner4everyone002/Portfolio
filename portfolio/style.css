@@ -1,254 +1,272 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body{
-background:#0f172a;
-color:white;
-}
+<title>Aakash Jangeeti | AI Engineer</title>
 
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 10%;
-background:#020617;
-position:sticky;
-top:0;
-}
+<link rel="stylesheet" href="style.css">
 
-nav ul{
-display:flex;
-list-style:none;
-gap:30px;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-nav a{
-text-decoration:none;
-color:white;
-}
+</head>
 
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 10%;
-gap:60px;
-}
+<body>
 
-.hero-left h1{
-font-size:48px;
-}
+<nav>
+<h2><a href="#home">Aakash</a></h2>
 
-.hero-left{
-max-width:500px;
-}
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-.hero-left span{
-color:#38bdf8;
-}
-
-.hero-right img{
-width:250px;
-height:250px;
-object-fit:cover;
-object-position: 19% center;
-border-radius:50%;
-border:4px solid #38bdf8;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#38bdf8;
-color:black;
-border-radius:6px;
-text-decoration:none;
-}
-
-section{
-padding:80px 10%;
-}
-
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-}
-
-.skill{
-background:#1e293b;
-padding:15px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition: all 0.3s ease;
-}
-
-/* Hover effect */
-.skill:hover{
-transform:translateY(-6px) scale(1.05);
-background:#334155;
-box-shadow:0 0 15px rgba(56,189,248,0.6);
-}
-
-/* Click effect */
-.skill:active{
-transform:scale(0.95);
-background:#38bdf8;
-color:black;
-}
-/* container for all skill categories */
-.skills-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-/* category card */
-.skill-category{
-background:#020617;
-padding:25px;
-border-radius:12px;
-transition:0.3s;
-}
-
-.skill-category:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
-}
-
-/* category title */
-.skill-category h3{
-margin-bottom:15px;
-color:#38bdf8;
-}
-
-/* grid inside each category */
-.skills-grid{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-/* skill badges */
-.skill{
-background:#1e293b;
-padding:8px 14px;
-border-radius:20px;
-font-size:14px;
-transition:0.3s;
-cursor:pointer;
-}
-
-/* hover animation */
-.skill:hover{
-background:#38bdf8;
-color:black;
-transform:scale(1.1);
-box-shadow:0 0 10px rgba(56,189,248,0.7);
-}
-
-/* click effect */
-.skill:active{
-transform:scale(0.9);
-}
-
-.project-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-/* CONTACT SECTION */
-
-.contact-container{
-display:flex;
-justify-content:center;
-margin-top:40px;
-}
-
-.contact-card{
-background:#1e293b;
-padding:40px;
-border-radius:12px;
-text-align:center;
-width:350px;
-transition:0.3s;
-}
-
-.contact-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,0.5);
-}
-
-.contact-card a{
-display:block;
-color:#38bdf8;
-text-decoration:none;
-margin-bottom:15px;
-font-size:16px;
-}
-
-.contact-card a:hover{
-text-decoration:underline;
-}
+</nav>
 
 
-/* SOCIAL BUTTONS */
+<section id="home" class="hero">
 
-.contact-links{
-display:flex;
-justify-content:center;
-gap:20px;
-margin-top:20px;
-}
+<div class="hero-left">
 
-.contact-btn{
-display:inline-block;
-background:#38bdf8;
-color:#020617 !important;
-padding:12px 22px;
-border-radius:8px;
-text-decoration:none;
-font-weight:700;
-font-size:16px;
-transition:all 0.3s ease;
-}
+<h1>Hello, I'm <span>Aakash</span></h1>
 
-.contact-btn:hover{
-transform:translateY(-3px) scale(1.05);
-background:#0ea5e9;
-color:white;
-box-shadow:0 8px 20px rgba(56,189,248,0.6);
-}
+<h2>Technical Trainer |AI Engineer | Full Stack Developer</h2>
 
-/* FOOTER */
+<p>
+Empowering professionals through technical training while engineering AI‑powered applications with LLMs, RAG, and modern full‑stack technologies.
+</p>
 
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-color:#94a3b8;
-font-size:14px;
-margin-top:60px;
-}
+<a href="Aakash_Resume.pdf" class="btn">Download Resume</a>
 
-footer p:first-child{
-color:white;
-font-weight:500;
-}
+</div>
+
+
+<div class="hero-right">
+<img src="profile.jpeg" alt="Aakash">
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2>About Me</h2>
+<br>
+<p>
+I am a results‑driven technology professional with deep expertise in Artificial Intelligence, Machine Learning, and modern software engineering. I architect and deliver intelligent, production‑ready applications that harness Large Language Models (LLMs), Retrieval‑Augmented Generation (RAG) pipelines, and scalable backend infrastructures to solve complex business challenges with precision and efficiency.
+</p>
+<br>
+<p>
+My technical foundation spans Python, JavaScript, React, and Node.js, reinforced by advanced proficiency in leading AI frameworks such as LangChain and PyTorch. I integrate strong engineering discipline with a passion for enabling teams and organizations to adopt cutting‑edge technologies, positioning myself as a versatile contributor across AI innovation, backend architecture, and full‑stack development.
+</p>
+<br>
+<p>
+Strategic, adaptable, and execution‑focused, I bring the right balance of technical depth and practical experience to thrive in dynamic environments. I am committed to driving measurable impact through scalable, intelligent systems
+</p>
+</section>
+
+
+<section id="skills">
+
+<h2>Skills</h2>
+<br>
+
+<div class="skills-container">
+
+<div class="skill-category">
+<h3>Programming</h3>
+<div class="skills-grid">
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">JavaScript</div>
+</div>
+</div>
+
+<div class="skill-category">
+<h3>Databases</h3>
+<div class="skills-grid">
+<div class="skill">MySQL</div>
+<div class="skill">MongoDB</div>
+<div class="skill">FAISS</div>
+<div class="skill">Chroma</div>
+</div>
+</div>
+
+<div class="skill-category">
+<h3>AI & Machine Learning</h3>
+<div class="skills-grid">
+<div class="skill">NLP</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">RAG</div>
+<div class="skill">LLMs</div>
+<div class="skill">HuggingFace</div>
+<div class="skill">LangChain</div>
+<div class="skill">Prompt Engineering</div>
+<div class="skill">Model Fine-tuning</div>
+</div>
+</div>
+
+<div class="skill-category">
+<h3>Frameworks & Libraries</h3>
+<div class="skills-grid">
+<div class="skill">PyTorch</div>
+<div class="skill">TensorFlow</div>
+<div class="skill">Scikit-learn</div>
+<div class="skill">React.js</div>
+<div class="skill">Node.js</div>
+<div class="skill">Express.js</div>
+</div>
+</div>
+
+<div class="skill-category">
+<h3>MLOps & DevOps</h3>
+<div class="skills-grid">
+<div class="skill">Docker</div>
+<div class="skill">Git</div>
+<div class="skill">FastAPI</div>
+<div class="skill">MLflow</div>
+</div>
+</div>
+
+<div class="skill-category">
+<h3>Tools & Platforms</h3>
+<div class="skills-grid">
+<div class="skill">Jupyter</div>
+<div class="skill">VS Code</div>
+<div class="skill">Postman</div>
+<div class="skill">AutoCAD</div>
+<div class="skill">REST APIs</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="achievements">
+
+<h2>Achievements</h2>
+<br>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+
+
+
+<div class="achievement-text">
+<h3>AI Training Impact</h3>
+<p>
+Trained <strong>200+ engineering students</strong> in <strong>Agentic AI</strong>, enabling them to design and deploy
+multi-agent projects using <strong>LangGraph, LLMs, and orchestration frameworks</strong>.
+</p>
+</div>
+
+</div>
+
+<!-- Add more achievements like this -->
+
+<div class="achievement-card">
+
+<div class="achievement-image">
+<img src="my_honour.jpeg" alt="Workshop Achievement" class="achievement-img">
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- IMAGE MODAL (gallery viewer) -->
+<div id="imageModal" class="image-modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="modalImg">
+</div>
+<section id="projects">
+
+<h2>Projects</h2>
+<br>
+
+<div class="project-grid">
+
+<div class="card">
+<h3>Wanderly AI</h3>
+<br>
+<img src="travel.jpg" alt="Wanderly AI">
+
+<p>Wanderly AI transforms the travel planning experience by combining AI‑driven insights with practical scheduling and visualization tools. It empowers users to explore destinations with clarity, efficiency, and confidence — making it a versatile solution for both casual travelers and tourism platforms.</p>
+</div>
+
+<div class="card">
+<h3>Placement Prep Chatbot</h3>
+
+<img src="chatbot.png" alt="Placement Prep Chatbot">
+<br>
+<p>This chatbot transforms placement preparation into an interactive, AI‑driven experience. By combining retrieval‑based intelligence with flexible training capabilities, it empowers learners to access the right information at the right time, making preparation more efficient, personalized, and scalable.</p>
+</div>
+
+<div class="card">
+<h3>Deepfake Defender</h3>
+<img src="deepfake detection.jpg" alt="Deepfake Defender">
+<p>This project addresses one of the most pressing challenges in AI ethics and digital security. By combining advanced neural architectures, it provides a reliable solution for detecting deepfakes, protecting individuals and organizations from misinformation, fraud, and reputational risks.</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact-container">
+
+<div class="contact-card">
+
+<p><strong>Email</strong></p>
+<a href="mailto:aakashroyal1710@gmail.com">
+aakashroyal1710@gmail.com
+</a>
+
+<p><strong>Phone</strong></p>
+<a href="tel:+916301283783">
++91 6301283783
+</a>
+
+<div class="contact-links">
+
+<a href="https://www.linkedin.com/in/aakash-jangeeti-a8015821b/" target="_blank" rel="noopener" class="contact-btn">
+LinkedIn
+</a>
+
+<a href="https://github.com/Webdesigner4everyone002" target="_blank" rel="noopener" class="contact-btn">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2025 Aakash Jangeeti</p>
+<p>Built with HTML, CSS & JavaScript</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
