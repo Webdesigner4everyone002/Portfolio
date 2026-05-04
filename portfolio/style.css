@@ -259,6 +259,32 @@ transition:0.3s;
 transform:translateY(-10px);
 }
 
+.github-invite {
+  margin-top: 40px;
+  text-align: center;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.github-invite p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.github-invite a {
+  color: #38bdf8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.github-invite a:hover {
+  text-decoration: underline;
+  color: #0ea5e9;
+}
+
+
 /* CONTACT SECTION */
 
 .contact-container{
