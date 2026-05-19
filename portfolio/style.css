@@ -415,18 +415,21 @@ font-size:14px;
    FULLSCREEN IMAGE MODAL
 ========================= */
 
+/* =========================
+   FULLSCREEN IMAGE MODAL
+========================= */
+
 .image-modal{
 
 display:none;
 
 position:fixed;
 
-z-index:2000;
-
 inset:0;
 
-background:
-rgba(2,6,23,0.95);
+z-index:9999;
+
+background:rgba(2,6,23,0.96);
 
 backdrop-filter:blur(8px);
 
@@ -434,7 +437,9 @@ justify-content:center;
 
 align-items:center;
 
-animation:fadeIn 0.4s ease;
+overflow:hidden;
+
+padding:30px;
 }
 
 /* MODAL IMAGE */
@@ -443,13 +448,15 @@ animation:fadeIn 0.4s ease;
 
 max-width:90%;
 
-max-height:88vh;
+max-height:90vh;
 
 border-radius:18px;
 
-transform:scale(0.7);
+cursor:grab;
 
-animation:zoomIn 0.4s ease forwards;
+user-select:none;
+
+transition:transform 0.25s ease;
 
 box-shadow:
 0 20px 40px rgba(0,0,0,0.6),
@@ -462,22 +469,24 @@ box-shadow:
 
 position:absolute;
 
-top:25px;
+top:20px;
 
-right:40px;
+right:35px;
+
+font-size:50px;
 
 color:white;
 
-font-size:42px;
-
 cursor:pointer;
+
+z-index:10000;
 
 transition:0.3s ease;
 }
 
 .close:hover{
 
-transform:rotate(90deg) scale(1.2);
+transform:rotate(90deg) scale(1.15);
 
 color:#38bdf8;
 }
