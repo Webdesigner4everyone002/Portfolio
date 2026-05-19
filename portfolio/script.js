@@ -24,6 +24,10 @@ navLinks.forEach(link => {
    IMAGE MODAL VIEWER
 ========================= */
 
+/* =========================
+   IMAGE GALLERY MODAL
+========================= */
+
 const images = document.querySelectorAll(".achievement-img");
 
 const modal = document.getElementById("imageModal");
@@ -32,7 +36,11 @@ const modalImg = document.getElementById("modalImg");
 
 const closeBtn = document.querySelector(".close");
 
-/* OPEN MODAL */
+/* ZOOM SCALE */
+
+let scale = 1;
+
+/* OPEN IMAGE */
 
 images.forEach(image => {
 
@@ -42,14 +50,11 @@ images.forEach(image => {
 
         modalImg.src = image.src;
 
-        /* RESET ANIMATION */
+        scale = 1;
 
-        modalImg.style.animation = "none";
+        modalImg.style.transform = `scale(${scale})`;
 
-        modalImg.offsetHeight; // reflow trigger
-
-        modalImg.style.animation =
-        "zoomIn 0.4s ease forwards";
+        document.body.style.overflow = "hidden";
 
     });
 
@@ -60,6 +65,8 @@ images.forEach(image => {
 function closeModal(){
 
     modal.style.display = "none";
+
+    document.body.style.overflow = "auto";
 
 }
 
@@ -79,7 +86,7 @@ modal.addEventListener("click", e => {
 
 });
 
-/* ESC KEY CLOSE */
+/* ESC CLOSE */
 
 document.addEventListener("keydown", e => {
 
@@ -88,6 +95,60 @@ document.addEventListener("keydown", e => {
         closeModal();
 
     }
+
+});
+
+/* =========================
+   ZOOM WITH MOUSE WHEEL
+========================= */
+
+modalImg.addEventListener("wheel", e => {
+
+    e.preventDefault();
+
+    if(e.deltaY < 0){
+
+        scale += 0.15;
+
+    } else {
+
+        scale -= 0.15;
+
+    }
+
+    scale = Math.min(Math.max(1, scale), 5);
+
+    modalImg.style.transform = `scale(${scale})`;
+
+});
+
+/* =========================
+   DOUBLE CLICK ZOOM
+========================= */
+
+modalImg.addEventListener("dblclick", () => {
+
+    if(scale === 1){
+
+        scale = 2;
+
+    } else {
+
+        scale = 1;
+
+    }
+
+    modalImg.style.transform = `scale(${scale})`;
+
+});
+
+/* =========================
+   PREVENT IMAGE DRAG
+========================= */
+
+modalImg.addEventListener("dragstart", e => {
+
+    e.preventDefault();
 
 });
 
