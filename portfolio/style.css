@@ -183,18 +183,87 @@ transform:translateY(-8px);
 box-shadow:0 15px 30px rgba(0,0,0,0.5);
 }
 
-/* IMAGE */
+/* =========================
+   ACHIEVEMENT GALLERY
+========================= */
 
-.achievement-image img{
-width:100%;
-height:200px;
-object-fit:cover;
-cursor:pointer;
-transition:0.3s;
+.achievement-gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:12px;
+
+    padding:0 20px 20px;
 }
 
-.achievement-image img:hover{
-transform:scale(1.05);
+/* IMAGE STYLE */
+
+.achievement-img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:
+    transform 0.4s ease,
+    filter 0.4s ease,
+    box-shadow 0.4s ease;
+
+    position:relative;
+}
+
+/* HOVER EFFECT */
+
+.achievement-img:hover{
+
+    transform:scale(1.03);
+
+    filter:brightness(1.08);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.4),
+    0 0 18px rgba(56,189,248,0.35);
+}
+
+/* DIFFERENT HEIGHTS
+   FOR PINTEREST EFFECT */
+
+.achievement-gallery img:nth-child(2){
+    height:260px;
+}
+
+.achievement-gallery img:nth-child(3){
+    height:180px;
+}
+
+.achievement-gallery img:nth-child(4){
+    height:240px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .achievement-gallery{
+
+        grid-template-columns:
+        repeat(auto-fit,minmax(140px,1fr));
+
+    }
+
+    .achievement-img{
+        height:180px;
+    }
+
 }
 
 /* TEXT */
