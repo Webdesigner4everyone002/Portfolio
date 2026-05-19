@@ -12,25 +12,63 @@ behavior:"smooth"
 
 })
 })
+/* =========================
+   IMAGE MODAL VIEWER
+========================= */
+
 const images = document.querySelectorAll(".achievement-img");
+
 const modal = document.getElementById("imageModal");
+
 const modalImg = document.getElementById("modalImg");
+
 const closeBtn = document.querySelector(".close");
 
-images.forEach(img=>{
-img.addEventListener("click",()=>{
-modal.style.display="block";
-modalImg.src=img.src;
-});
+/* OPEN MODAL */
+
+images.forEach(image => {
+
+    image.addEventListener("click", () => {
+
+        modal.style.display = "flex";
+
+        modalImg.src = image.src;
+
+    });
+
 });
 
-closeBtn.onclick=()=>{
-modal.style.display="none";
-}
+/* CLOSE BUTTON */
 
-modal.onclick=()=>{
-modal.style.display="none";
-}
+closeBtn.addEventListener("click", () => {
+
+    modal.style.display = "none";
+
+});
+
+/* CLICK OUTSIDE IMAGE */
+
+modal.addEventListener("click", e => {
+
+    if(e.target !== modalImg){
+
+        modal.style.display = "none";
+
+    }
+
+});
+
+/* ESC KEY CLOSE */
+
+document.addEventListener("keydown", e => {
+
+    if(e.key === "Escape"){
+
+        modal.style.display = "none";
+
+    }
+
+});
 /* =========================
    SCROLL REVEAL ANIMATION
 ========================= */
