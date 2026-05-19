@@ -212,6 +212,160 @@ margin-bottom:10px;
 line-height:1.6;
 }
 
+/* =========================
+   LINKEDIN STYLE ACHIEVEMENTS
+========================= */
+
+.achievement-card{
+    background: rgba(30,41,59,0.85);
+    border:1px solid rgba(56,189,248,0.15);
+
+    backdrop-filter: blur(12px);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:0.4s ease;
+
+    position:relative;
+}
+
+/* Glow Border Effect */
+.achievement-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:18px;
+    padding:1px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(56,189,248,0.6),
+        transparent,
+        rgba(56,189,248,0.3)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+
+    opacity:0;
+    transition:0.4s;
+}
+
+.achievement-card:hover::before{
+    opacity:1;
+}
+
+/* Hover Animation */
+.achievement-card:hover{
+    transform:translateY(-10px) scale(1.01);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.5),
+    0 0 20px rgba(56,189,248,0.2);
+}
+
+/* HEADER */
+
+.achievement-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:20px;
+}
+
+.achievement-header img{
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:2px solid #38bdf8;
+}
+
+.achievement-header h3{
+    font-size:18px;
+}
+
+.achievement-header span{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* CONTENT */
+
+.achievement-content{
+    padding:0 20px 20px;
+}
+
+.achievement-content h2{
+    color:#38bdf8;
+    margin-bottom:12px;
+
+    font-size:24px;
+}
+
+.achievement-content p{
+    line-height:1.8;
+    color:#e2e8f0;
+}
+
+/* GALLERY */
+
+.achievement-gallery{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:10px;
+
+    padding:0 20px 20px;
+}
+
+.achievement-gallery img{
+    width:100%;
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+}
+
+/* IMAGE HOVER */
+
+.achievement-gallery img:hover{
+    transform:scale(1.03);
+
+    filter:brightness(1.1);
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.4),
+    0 0 15px rgba(56,189,248,0.4);
+}
+
+/* FOOTER */
+
+.achievement-footer{
+    padding:18px 20px;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+
+    color:#38bdf8;
+
+    font-size:14px;
+}
+
 /* MODAL VIEWER */
 
 .image-modal{
