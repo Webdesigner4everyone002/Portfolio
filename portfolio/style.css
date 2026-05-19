@@ -366,6 +366,24 @@ line-height:1.6;
     font-size:14px;
 }
 
+/* INITIAL STATE */
+
+.achievement-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+/* SHOW STATE */
+
+.achievement-card.show{
+    opacity:1;
+    transform:translateY(0);
+
+    transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
 /* MODAL VIEWER */
 
 .image-modal{
